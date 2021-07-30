@@ -1,0 +1,13 @@
+#navbarSupportedContent {
+    justify-content: flex-end;
+}
+
+#headerImage{
+    max-width: 3em;
+margin-left: 1em;
+}
+
+#navBar{
+    padding: 1%;
+    background-color: #161b22;
+}
