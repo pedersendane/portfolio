@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../Header/Header.js';
+import DarkToggle from '../Toggle/DarkToggle.js';
 const Layout =({children}) =>{
     return(
         <>
-        <div>
             <Header/>
-        </div>
-        <main>{children}</main>
+            <main>{children}</main>
+            <DarkToggle/>
         </>
     )
 }

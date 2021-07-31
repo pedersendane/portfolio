@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 // We will create these two pages in a moment
-import HomePage from './Pages/HomePage'
-import ProjectPage from './Pages/ProjectPage'
+import HomePage from './Pages/HomePage/HomePage.js'
+import ProjectPage from './Pages/ProjectPage/ProjectPage.js'
 import * as Constants from './Constants';
 
 export default function App() {
@@ -10,8 +10,6 @@ export default function App() {
     <Switch>
       <Route exact path={Constants.HomeUrl} component={HomePage} />
       <Route exact path={Constants.ProjectsUrl} component={ProjectPage} />
-      {/* <Route exact path="/Github-Pages-Personal-Site/" component={HomePage} /> */}
-      {/* <Route path="/:id" component={UserPage} /> */}
     </Switch>
   )
 }

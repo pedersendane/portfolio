@@ -2,12 +2,13 @@
     justify-content: flex-end;
 }
 
-#headerImage{
+#headerImage {
     max-width: 3em;
-margin-left: 1em;
+    margin-left: 1em;
+    border-radius: 30px;
 }
 
-#navBar{
+#navBar {
     padding: 1%;
     background-color: #161b22;
 }
