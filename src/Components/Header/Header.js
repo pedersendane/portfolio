@@ -4,31 +4,21 @@ import Image from '../../Styles/Images/dpLogo.png';
 import * as Constants from '../../Constants.js';
 import './Header.css';
 
-function ToggleDarkMode() {
-    let darkToggle = document.getElementById('dark-toggle');
-        darkToggle.bootstrapToggle({
-          on: 'Enabled',
-          off: 'Disabled'
-        });
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-  } 
-
 function Header() {
     return (
-        <nav id="navBar" class="navbar navbar-expand-lg">
-            <Link to={Constants.HomeUrl} class="navbar-brand"><img id="headerImage" src={Image} alt={"Dane Pedersen's Personal Logo"}></img></Link>
-            <button id="hamburger" class="navbar-dark navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <nav id="navBar" className="navbar navbar-expand-lg">
+            <Link to={Constants.HomeUrl} className="navbar-brand"><img id="headerImage" src={Image} alt={"Dane Pedersen's Personal Logo"}></img></Link>
+            <button id="hamburger" className="navbar-dark navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
             </button>
             
-            <div class="collapse navbar-collapse my-2 my-lg-0" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto mr-sm-2">
-                <li class="nav-item active my-2 my-sm-0">
-                    <Link to={Constants.HomeUrl} class="nav-link my-2 my-sm-0 dark-theme-link">Home</Link>
+            <div className="collapse navbar-collapse my-2 my-lg-0" id="navbarSupportedContent">
+                <ul className="navbar-nav mr-auto mr-sm-2">
+                <li className="nav-item active my-2 my-sm-0">
+                    <Link to={Constants.HomeUrl} className="nav-link my-2 my-sm-0 dark-theme-link">Home</Link>
                 </li>
-                <li class="nav-item my-2 my-sm-0">
-                    <Link to={Constants.ProjectsUrl} class="nav-link my-2 my-sm-0 dark-theme-link">Projects</Link>
+                <li className="nav-item my-2 my-sm-0">
+                    <Link to={Constants.ProjectsUrl} className="nav-link my-2 my-sm-0 dark-theme-link">Projects</Link>
                 </li>
             </ul>
         </div>

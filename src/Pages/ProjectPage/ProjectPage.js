@@ -8,21 +8,7 @@ function ProjectPage() {
     return (
         <Layout>
             <StackingCards>
-                <ImageCard
-                    number={1}
-                    image={Constants.CodePhoto}
-                    alt={"Code that explains some fun facts about me"}
-                />
-                <ImageCard
-                    number={2}
-                    image={Constants.CodePhoto}
-                    alt={"Code that explains some fun facts about me"}
-                />
-                <ImageCard
-                    number={2}
-                    image={Constants.CodePhoto}
-                    alt={"Code that explains some fun facts about me"}
-                />
+                
             </StackingCards>
         </Layout>
         
