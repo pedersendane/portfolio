@@ -32,8 +32,8 @@ const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg
 function CardDeck(){
   const [gone] = useState(() => new Set()) // The set flags all the cards that are flicked out
   const [props, set] = useSprings(cards.length, i => ({ ...to(i), from: from(i) })) // Create a bunch of springs using the helpers above
-  const allCards = document.querySelectorAll('div.animated');
-  const initialIndex = allCards.length - 1;
+  let allCards = document.querySelectorAll('div.animated');
+  let initialIndex = allCards.length - 1;
   let newIndex = 0;
   const bind = () => {
     let index = initialIndex - newIndex;
@@ -52,17 +52,20 @@ function CardDeck(){
       // return { x, rot, scale, delay: undefined}
     })
     newIndex += 1
-    if (gone.size === cards.length) {
-      setTimeout(() => gone.clear() || set(i => to(i)), 600) && resetIndex()
-    }
     if (newIndex < 0 || newIndex > allCards.length) {
       resetIndex();
+    }
+    if (gone.size === cards.length) {
+      setTimeout(() => gone.clear() || set(i => to(i)), 600) && resetIndex()
     }
     
   }
 
   function resetIndex(){
     newIndex = 0;
+    allCards = document.querySelectorAll('div.animated');
+    initialIndex = allCards.length - 1;
+  
   }
   
   useEffect(() => {
