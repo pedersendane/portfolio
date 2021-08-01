@@ -1,15 +1,21 @@
 import React from 'react';
 import './HomePage.css';
-import * as Constants from '../../Constants.js';
 import Layout from '../../Components/Layout/Layout.js';
-import ScrollReveal from '../../Components/ScrollReveal/ScrollReveal';
+import ImageContainer from '../../Components/ImageContainer/ImageContainer';
+import CardDeck from '../../Components/Cards/CardDeck';
 
 export default function HomePage() {
     return (
-        <Layout>
-            <ScrollReveal/>
-            {/* <CardDeck/> */}
-            
+      <Layout>
+        <div className={"image-container"}>
+          <section>
+            <ImageContainer />
+          </section>
+          <section id="card-deck-root">
+              <CardDeck />
+            </section>
+          
+        </div>
     </Layout>   
   )
 }

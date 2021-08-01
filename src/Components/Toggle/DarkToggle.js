@@ -23,19 +23,12 @@ function updateDarkMode() {
     let bodyClassList = document.body.classList;
     let darkStorage = localStorage.getItem('dark-mode');
     let toggleSwitch = document.getElementById('toggle');
-    let cards = document.querySelector('#cards');
-    let cardContents = document.querySelectorAll('li.card > div.card__content');
     if (darkStorage == null) {
         setLocalStorage()
     }
     if (darkStorage.toString() === "true") {
         if (!bodyClassList.contains('dark-mode')) { 
             bodyClassList.toggle('dark-mode');
-            if (cardContents) {
-                cardContents.forEach(x => {
-                    x.classList.toggle('card-dark-mode');
-                });
-            }
         }
         if (!toggleSwitch.checked) {
             toggleSwitch.checked = true;
@@ -45,11 +38,6 @@ function updateDarkMode() {
     else if(darkStorage.toString() === "false") {
         if (bodyClassList.contains('dark-mode')) {
             bodyClassList.toggle('dark-mode');
-            if (cardContents) {
-                cardContents.forEach(x => {
-                    x.classList.toggle('card-dark-mode');
-                });
-            }
         }
         if (toggleSwitch.checked) {
             toggleSwitch.checked = false;

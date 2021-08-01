@@ -1,14 +1,4 @@
-#codePhoto {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-#imageCard {
-    background-color: #0d1117;
-}
-
 .dark-theme-link {
-    color: white;
-    font-weight: bold;
+  color: white;
+  font-weight: bold;
 }

@@ -1,22 +1,18 @@
 import React, { useEffect } from 'react'
 import * as Constants from '../../Constants.js'
-import './ScrollReveal.css'
+import './ImageContainer.css'
 import TypeWriter from '../TypeWriter/TypeWriter.js';
 
-function ScrollReveal(){
+function ImageContainer(){
     useEffect(() => {
-            let nameMessage = "Hello! My name is Dane Pedersen";
+            let nameMessage = "Hello! My name is Dane Pedersen. Welcome to my site";
             TypeWriter(nameMessage, 45, 'name-text');
-            let welcomeMessage = "Welcome to my site";
-            TypeWriter(welcomeMessage, 45, 'welcome-text');
-            //welcome
         })
     return (
         <>
-        <div className="scroll-reveal">
-                    <img id="landing-page-photo" src={Constants.TransparentCodePhoto} alt={Constants.TransparentCodePhotoAlt} />
-                    <h3 className="pt-2" id={"name-text"}> </h3>
-                    <h3 id={"welcome-text"}> </h3>
+            <div className="image-container">
+                <img id="landing-page-photo" src={Constants.CodePhoto} alt={Constants.CodePhotoAlt} />
+                <h4 className="pt-1" id={"name-text"}> </h4>
             </div>
         </>
        
@@ -24,7 +20,8 @@ function ScrollReveal(){
     )
 }
 
-export default ScrollReveal
+
+export default ImageContainer
 
         // <>
         //     <div className="header">

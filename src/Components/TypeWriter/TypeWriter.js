@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 
 /**
  * Add typewriter effect to text
@@ -15,7 +14,12 @@ function TypeWriter(text, speed, id) {
     };
     function type() {
         if (i < text.length) {
-            document.getElementById(id).innerHTML += text.charAt(i);
+            if (document.getElementById(id)) {
+                document.getElementById(id).innerHTML += text.charAt(i);
+            } else {
+                return;
+            }
+            
         i++;
         setTimeout(type, speed);
       }

@@ -1,6 +1,5 @@
 import dpLogo from './Styles/Images/dpLogo.png';
-import codePhoto from './Styles/Images/welcomePageCode.png';
-import transparentCodePhoto from './Styles/Images/transparentTerminalCode.png';
+import codePhoto from './Styles/Images/terminalCode.png';
 //Urls
 export const HomeUrl = "/portfolio/";
 export const ProjectsUrl = "/portfolio/projects";
@@ -8,12 +7,10 @@ export const ProjectsUrl = "/portfolio/projects";
 //Photos
 export const Logo = dpLogo;
 export const CodePhoto = codePhoto;
-export const TransparentCodePhoto = transparentCodePhoto;
 
 //Alts
 export const LogoAlt = "The letters D and P surrounded by opening and closing code brackets";
 export const CodePhotoAlt = "A block of code with information about Dane Pedersen";
-export const TransparentCodePhotoAlt = CodePhotoAlt;
 
 //Colors
 export const Theme = {
