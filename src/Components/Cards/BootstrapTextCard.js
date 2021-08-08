@@ -7,6 +7,9 @@ const BootstrapTextCard = (props) => {
     const isDarkMode = darkStorage.toString() === "true";
     const darkMode = isDarkMode ? "dark-mode-secondary" : "";
     const adjustedWidth = Constants.UserIsOnMobile() ? 100 : props.width;
+    // USE LINK TO IF ROUTING TO ANOTHER COMPONENT
+    const formattedLink = props.link && props.linkText ? <Link to={props.link} className={"btn btn-primary"}>{props.linkText}</Link> : ""
+                
     return (
         <div class={`card text-center ${darkMode}`}
             style={{ width: `${adjustedWidth}%`, marginBottom: '2em' }}
@@ -15,8 +18,8 @@ const BootstrapTextCard = (props) => {
                     <h5 className="card-title">{props.title}</h5>
                         <h6 className="card-subtitle mb-2 text-muted">{props.subTitle}</h6>
                         {props.children}
-                    <p className="card-text">{props.text}</p>
-                    {props.link && props.linkText ? <a href={props.link} className={"btn btn-primary"}>{props.linkText}</a> : ""}
+                <p className="card-text">{props.text}</p>
+                {formattedLink}
                 </div>
             </div>
     )
