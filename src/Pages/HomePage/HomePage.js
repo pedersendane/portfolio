@@ -21,16 +21,16 @@ export default function HomePage() {
               width={45}
               title={"My Projects"}
               subTitle={"Vist a page full of my links and projects"}
-              linkOne={Constants.ProjectsUrl}
-              linkOneText={"View Projects Page"}
+              link={Constants.ProjectsUrl}
+              linkText={"View Projects Page"}
             >
               </BootstrapTextCard>
             <BootstrapTextCard
-              width={45}
+              width={50}
               title={"Spotify"}
               subTitle={"See what I am listening to"}
-              linkOne={Constants.SpotifyUrl}
-              linkOneText={"View Spotify Page"}
+              link={Constants.SpotifyUrl}
+              linkText={"View Spotify Page"}
             >
               </BootstrapTextCard>
           </section>          

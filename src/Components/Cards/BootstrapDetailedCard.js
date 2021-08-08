@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import * as Constants from '../../Constants';
 
 const BootstrapDetailedCard = (props) => {
     const darkStorage = localStorage.getItem("dark-mode");
-    const darkMode = darkStorage.toString() === "true" ? "dark-mode-secondary" : "";
-    const button = props.link && props.linkText ? <a href={props.link} target={"_blank"} rel={"noreferrer"} class="btn btn-primary">{props.linkText}</a> : ""
+    const isDarkMode = darkStorage.toString() === "true";
+    const darkMode = isDarkMode ? "dark-mode-secondary" : "";
+    const button = props.link && props.linkText ? <a href={props.link} target={"_blank"} rel={"noreferrer"} class="btn btn-primary">{props.linkText} {props.icon}</a> : "";
+    const adjustedWith = Constants.UserIsOnMobile() ? 100 : props.width;
     return (
         <div class={`card text-center ${darkMode}`}
-            style={{ width: `${props.width}%`, marginBottom: '2em' }}
+            style={{ width: `${adjustedWith}%`, marginBottom: '2em' }}
         >
             <div class="card-header">
                 <h5><b>{props.header}</b></h5>

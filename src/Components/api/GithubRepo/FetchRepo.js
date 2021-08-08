@@ -40,10 +40,10 @@ function FetchRepo() {
       Hold on, fetching data may take some time: )
     </p>
   )
-} else {
+  }
+  else {
   const items = appState.repos;
-    if (!items || items.length === 0) { return <p> No items, sorry </p>; }
-    console.log(items);
+  if (!items || items.length === 0) { return <p> No items, sorry </p>; }
   return (
     items.map((item) => {
       const languageString = item.language ? `Tech Used: ${item.language}` : 'Text Files';
@@ -69,6 +69,9 @@ function FetchRepo() {
         linkText = {
           "View on Github"
         }
+          icon={
+            <i class="bi-github" role="img" aria-label="GitHub"></i>
+          }
         footer = {
           creationDateString
         }

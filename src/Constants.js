@@ -27,3 +27,11 @@ export const Theme = {
 export const ProjectTitle = "Projects";
 export const ProjectParagraph = "Take a look at all of the projects I have been working on";
 export const ProjectButtonText = "View Projects";
+
+export const UserIsOnMobile = () => {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true;
+    } else {
+        return false;
+    }
+}

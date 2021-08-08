@@ -4,13 +4,36 @@ import Image from '../../Styles/Images/dpLogo.png';
 import * as Constants from '../../Constants.js';
 import './Header.css';
 
+function toggler(id, [classToToggle]) {
+    let x = document.getElementById(id).classList;
+    x.toggle(classToToggle)
+}
+
 function Header() {
     const url = window.location.pathname;
     return (
         <nav id="navBar" className="navbar navbar-expand-lg">
-            <Link to={Constants.HomeUrl} className="navbar-brand"><img id="headerImage" src={Image} alt={"Dane Pedersen's Personal Logo"}></img></Link>
-            <button id="hamburger" className="navbar-dark navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+            <Link to={Constants.HomeUrl} className="navbar-brand">
+                <img id="headerImage" src={Image} alt={"Dane Pedersen's Personal Logo"}></img>
+            </Link>
+            <button id="hamburger"
+                className="navbar-dark navbar-toggler"
+                type="button"
+                aria-label="Toggle navigation"
+                onClick={() => {
+                    toggler('navbarToggler', ['open']);
+                    toggler('navbarSupportedContent', ['open', 'collapse'])
+                    toggler('navbar-close', ['open'])
+                    // let icon = document.getElementById('navbarToggler').classList;
+                    // icon.toggle('open');
+                    // let hiddenContent = document.getElementById('navbarSupportedContent').classList;
+                    // hiddenContent.toggle('open');
+                    // hiddenContent.toggle('collapse');
+                    // let x = document.getElementById('navbar-close').classList;
+                    // x.toggle('open');
+                }}
+            >
+                <span id={'navbarToggler'} className="navbar-toggler-icon"><span id="navbar-close">X</span></span>
             </button>
             
             <div className="collapse navbar-collapse my-2 my-lg-0" id="navbarSupportedContent">

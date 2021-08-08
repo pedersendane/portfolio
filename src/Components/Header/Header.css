@@ -1,6 +1,25 @@
-#navbarSupportedContent {
+
+#navbarSupportedContent{
     justify-content: flex-end;
 }
+#navbarSupportedContent.open {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    height: auto;
+}
+
+#navbarToggler.navbar-toggler-icon.open{
+    background-image: none
+}
+#navbar-close{
+    display: none;
+    color: white;
+}
+#navbar-close.open{
+    display: inline;
+}
+
 
 #headerImage {
     max-width: 3em;

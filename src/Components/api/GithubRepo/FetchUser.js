@@ -30,7 +30,6 @@ function FetchUser() {
         if (!user) {
             return <p>No items, sorry</p>;
         }
-        console.log(user);
         const date = new Date(user.created_at) // formated_Date - SDK returned date
         const creationDateString = `Created on ${date.toLocaleDateString()} at ${date.toLocaleTimeString()}`;
         return (
@@ -41,6 +40,7 @@ function FetchUser() {
                     cardDisplay={`inline`}
                     cardPadding={`0 0 2em 0`}
                     header={"Github Projects"}
+                    headerMargin={`0 0 1em 0`}
                     imageSrc={user.avatar_url}
                     imageAlt={"Dane's Github profile picture"}
                     imageWidth={`260px`}

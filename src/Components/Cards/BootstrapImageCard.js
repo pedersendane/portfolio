@@ -1,4 +1,5 @@
 import React from 'react'
+import * as Constants from '../../Constants'
 
 const BootstrapImageCard = (props) => {
     const darkStorage = localStorage.getItem("dark-mode");
@@ -8,7 +9,7 @@ const BootstrapImageCard = (props) => {
             width: props.cardWidth, margin: props.cardMargin,
             display: props.cardDisplay, padding: props.cardPadding
         }}>
-            <h2 className={"text-center card-header"}>
+            <h2 className={"text-center card-header"} style={{margin: props.headerMargin}}>
                 {props.header}
             </h2>
             <img class="card-img-top center"
