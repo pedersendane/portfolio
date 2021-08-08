@@ -16,6 +16,10 @@ body {
   background-color: #121212;
   color: white;
 }
+.dark-mode-secondary{
+  background-color: #222222;
+  color: white;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

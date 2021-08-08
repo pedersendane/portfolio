@@ -12,7 +12,7 @@ function ImageContainer(){
         <>
             <div className="image-container">
                 <img id="landing-page-photo" src={Constants.CodePhoto} alt={Constants.CodePhotoAlt} />
-                <h4 className="pt-1" id={"name-text"}> </h4>
+                <h2 className="pt-4 pb-4" id={"name-text"}> </h2>
             </div>
         </>
        

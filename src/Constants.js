@@ -3,6 +3,8 @@ import codePhoto from './Styles/Images/terminalCode.png';
 //Urls
 export const HomeUrl = "/portfolio/";
 export const ProjectsUrl = "/portfolio/projects";
+export const SpotifyUrl = "/portfolio/spotify";
+
 
 //Photos
 export const Logo = dpLogo;
@@ -16,9 +18,9 @@ export const CodePhotoAlt = "A block of code with information about Dane Pederse
 export const Theme = {
     red: '#ff3036',
     lightBackground: '#d0d6db',
-    darkBackground: '#0d1117',
-    darkNavBar: '#161b22',
-
+    navBar: '#1d1d1d',
+    darkBackground: '#121212',
+    darkBackgroundSecondary: '#222222',
 }
 
 

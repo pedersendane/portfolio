@@ -2,3 +2,12 @@
   color: white;
   font-weight: bold;
 }
+.card-section{
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: space-evenly;
+  }
+
+#home-page-cards{
+  
+}

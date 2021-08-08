@@ -39,8 +39,7 @@ function CardDeck(){
     let index = initialIndex - newIndex;
     let down = false;
     gone.add(index);
-    console.log(index);
-    console.log(gone)
+    
     set(i => {
       if (index !== i) return // We're only interested in changing spring-data for the current spring
       const isGone = gone.has(index)

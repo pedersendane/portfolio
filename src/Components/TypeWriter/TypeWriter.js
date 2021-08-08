@@ -7,7 +7,6 @@
  * @return void
  */
 function TypeWriter(text, speed, id) {
-    console.log(text)
     let i = 0;
     if (document.getElementById(id).innerHTML !== '') {
         document.getElementById(id).innerHTML = '';
