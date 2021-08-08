@@ -1,4 +1,5 @@
-import React, { Children } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom';
 import * as Constants from '../../Constants'
 import './Cards.css'
 const BootstrapTextCard = (props) => {
@@ -15,7 +16,7 @@ const BootstrapTextCard = (props) => {
                         <h6 className="card-subtitle mb-2 text-muted">{props.subTitle}</h6>
                         {props.children}
                     <p className="card-text">{props.text}</p>
-                    {props.link && props.linkText ? <a href={props.link} className={"btn btn-primary"}>{props.linkText}</a> : ""}
+                    {props.link && props.linkText ? <Link to={props.link} className={"btn btn-primary"}>{props.linkText}</Link> : ""}
                 </div>
             </div>
     )

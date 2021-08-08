@@ -6,13 +6,11 @@ import { updateDarkMode } from './Components/Toggle/DarkToggle.js'
 import * as Constants from './Constants';
 
 export default function App() {
-  useEffect(() =>{
-    hideWarnings();
-  })
+  hideWarnings();
   return (
     <Switch>
-      <Route exact path={Constants.HomeUrl} component={HomePage} />
-      <Route exact path={Constants.ProjectsUrl} component={ProjectPage} />
+      <Route path={Constants.HomeUrl} component={HomePage} />
+      <Route path={Constants.ProjectsUrl} component={ProjectPage} />
     </Switch>
   )
 }

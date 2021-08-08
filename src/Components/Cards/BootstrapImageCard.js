@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import * as Constants from '../../Constants'
 
 const BootstrapImageCard = (props) => {
@@ -20,7 +21,7 @@ const BootstrapImageCard = (props) => {
                 <h5 class="card-title">{props.title}</h5>
                 <p class="card-text">{props.text}</p>
                 {props.children}
-                <a href={props.link} class="btn btn-primary">{props.linkText}</a>
+                <Link to={props.link} class="btn btn-primary">{props.linkText}</Link>
             </div>
         </div>
             
