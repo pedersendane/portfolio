@@ -6,7 +6,7 @@ const BootstrapDetailedCard = (props) => {
     const darkStorage = localStorage.getItem("dark-mode");
     const isDarkMode = darkStorage.toString() === "true";
     const darkMode = isDarkMode ? "dark-mode-secondary" : "";
-    const button = props.link && props.linkText ? <Link to={props.link} target={"_blank"} rel={"noreferrer"} class="btn btn-primary">{props.linkText} {props.icon}</Link> : "";
+    const button = props.link && props.linkText ? <a href={props.link} target={"_blank"} rel={"noreferrer"} class="btn btn-primary">{props.linkText} {props.icon}</a> : "";
     const adjustedWith = Constants.UserIsOnMobile() ? 100 : props.width;
     return (
         <div class={`card text-center ${darkMode}`}

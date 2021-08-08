@@ -16,7 +16,7 @@ const BootstrapTextCard = (props) => {
                         <h6 className="card-subtitle mb-2 text-muted">{props.subTitle}</h6>
                         {props.children}
                     <p className="card-text">{props.text}</p>
-                    {props.link && props.linkText ? <Link to={props.link} className={"btn btn-primary"}>{props.linkText}</Link> : ""}
+                    {props.link && props.linkText ? <a href={props.link} className={"btn btn-primary"}>{props.linkText}</a> : ""}
                 </div>
             </div>
     )

@@ -9,8 +9,8 @@ export default function App() {
   hideWarnings();
   return (
     <Switch>
-      <Route path={Constants.HomeUrl} component={HomePage} />
-      <Route path={Constants.ProjectsUrl} component={ProjectPage} />
+      <Route exact path={Constants.HomeUrl} component={HomePage} />
+      <Route exact path={Constants.ProjectsUrl} component={ProjectPage} />
     </Switch>
   )
 }

@@ -21,7 +21,7 @@ const BootstrapImageCard = (props) => {
                 <h5 class="card-title">{props.title}</h5>
                 <p class="card-text">{props.text}</p>
                 {props.children}
-                <Link to={props.link} class="btn btn-primary">{props.linkText}</Link>
+                <a href={props.link} target={"_blank"} rel={"noreferrer"} class="btn btn-primary">{props.linkText} {props.icon}</a>
             </div>
         </div>
             

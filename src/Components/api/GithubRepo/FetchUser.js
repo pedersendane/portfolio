@@ -41,6 +41,7 @@ function FetchUser() {
                     cardPadding={`0 0 2em 0`}
                     header={"Github Projects"}
                     headerMargin={`0 0 1em 0`}
+                    icon={<i class="bi-github" role="img" aria-label="GitHub"></i>}
                     imageSrc={user.avatar_url}
                     imageAlt={"Dane's Github profile picture"}
                     imageWidth={`260px`}
