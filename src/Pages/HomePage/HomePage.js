@@ -5,6 +5,7 @@ import ImageContainer from '../../Components/ImageContainer/ImageContainer';
 import BootstrapTextCard from '../../Components/Cards/BootstrapTextCard';
 import * as Constants from '../../Constants';
 import DarkToggle from '../../Components/Toggle/DarkToggle';
+import FetchSpotifyUrl from '../../Components/api/Spotify/FetchSpotifyUrl';
 // import CardDeck from '../../Components/Cards/CardDeck';
 
 export default function HomePage() {
@@ -18,7 +19,7 @@ export default function HomePage() {
 
           <section id={"home-page-cards"} className={"card-section"}>
             <BootstrapTextCard
-              width={45}
+              width={"45%"}
               title={"My Projects"}
               subTitle={"Vist a page full of my links and projects"}
               link={Constants.ProjectsUrl}
@@ -26,11 +27,11 @@ export default function HomePage() {
             >
               </BootstrapTextCard>
             <BootstrapTextCard
-              width={50}
+              width={"45%"}
               title={"Spotify"}
               subTitle={"See what I am listening to"}
-              link={Constants.SpotifyUrl}
-              linkText={"View Spotify Page"}
+              href={FetchSpotifyUrl()}
+              hrefText={"View Spotify Page"}
             >
               </BootstrapTextCard>
           </section>          

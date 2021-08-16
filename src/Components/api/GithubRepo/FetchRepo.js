@@ -37,7 +37,7 @@ function FetchRepo() {
             fontSize: '30px'
           }
         } >
-      Hold on, fetching data may take some time: )
+      
     </p>
   )
   }

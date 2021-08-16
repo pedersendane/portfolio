@@ -1,9 +1,16 @@
+import {
+    useEffect,
+    useState
+} from "react";
+
+
 import dpLogo from './Styles/Images/dpLogo.png';
 import codePhoto from './Styles/Images/terminalCode.png';
 //Urls
 export const HomeUrl = "/portfolio/";
 export const ProjectsUrl = "/portfolio/projects";
 export const SpotifyUrl = "/portfolio/spotify";
+
 
 
 //Photos

@@ -22,7 +22,7 @@ function FetchUser() {
     if (appState.loading || appState.loading == null) {
         return (
             <p style={{ textAlign: 'center', fontSize: '30px' }}>
-                Hold on, fetching data may take some time :)
+                Loading...
             </p>
         );
     } else {

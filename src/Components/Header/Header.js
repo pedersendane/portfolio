@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Image from '../../Styles/Images/dpLogo.png';
 import * as Constants from '../../Constants.js';
 import './Header.css';
+import FetchSpotifyUrl from '../api/Spotify/FetchSpotifyUrl';
 
 function toggler(id, [classToToggle]) {
     let x = document.getElementById(id).classList;
@@ -43,6 +44,9 @@ function Header() {
                 </li>
                 <li className={`nav-item my-2 my-sm-0 ${url === Constants.ProjectsUrl ? "active" : ""}`}>
                     <Link to={Constants.ProjectsUrl} className={`nav-link my-2 my-sm-0 ${url === Constants.ProjectsUrl ? "active" : "dark-theme-link"}`}>Projects</Link>
+                    </li>
+                    <li className={`nav-item my-2 my-sm-0 ${url === Constants.SpotifyUrl ? "active" : ""}`}>
+                    <a href={FetchSpotifyUrl()} className={`nav-link my-2 my-sm-0 ${url === Constants.SpotifyUrl ? "active" : "dark-theme-link"}`}>Spotify</a>
                 </li>
             </ul>
         </div>
