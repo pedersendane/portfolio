@@ -15,8 +15,8 @@ export default function App() {
     <Switch>
       <Route exact path={Constants.HomeUrl} component={HomePage} />
       <Route exact path={Constants.ProjectsUrl} component={ProjectPage} />
-      <Route path={Constants.SpotifyUrl} component={SpotifyPage} />
-      <Route path={"/portfolio/spotify/login"} component={SpotifyLoginPage} />
+      <Route exact path={Constants.SpotifyUrl} component={SpotifyPage} />
+      <Route exact path={"/portfolio/spotify/login"} component={SpotifyLoginPage} />
     </Switch>
   )
 }
